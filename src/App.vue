@@ -1,24 +1,11 @@
 <template>
   <v-app>
+    <Header />
     <v-col>
-      <v-row>
-        <v-btn
-          elevation="2"
-        >Fade LEDs</v-btn>
-        <v-color-picker
-          itemid="left-color"
-          dot-size="25"
-          swatches-max-height="20"
-          elevation="2"
-        >
-        </v-color-picker>
-        <v-color-picker
-          itemid="right-color"
-          dot-size="25"
-          swatches-max-height="20"
-          elevation="2"
-        >
-        </v-color-picker>
+      <v-row class="control">
+        <LedButton txt="fade leds" />
+        <ColorPicker />
+        <ColorPicker />
       </v-row>
       <v-divider></v-divider>
     </v-col>
@@ -26,11 +13,16 @@
 </template>
 
 <script>
-
+import Header from './components/Header'
+import ColorPicker from './components/ColorPicker'
+import LedButton from './components/LedButton'
 export default {
   name: 'App',
 
   components: {
+    Header,
+    ColorPicker,
+    LedButton,
   },
 
   data: () => ({
@@ -38,3 +30,9 @@ export default {
   }),
 };
 </script>
+
+<style>
+  .control-element {
+    margin: 10px;
+  }
+</style>
