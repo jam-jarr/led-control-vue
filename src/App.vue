@@ -2,11 +2,7 @@
   <v-app>
     <Header />
     <v-col>
-      <v-row class="control">
-        <LedButton txt="fade leds" />
-        <ColorPicker />
-        <ColorPicker />
-      </v-row>
+      <FadeControl />
       <v-divider></v-divider>
     </v-col>
   </v-app>
@@ -14,15 +10,13 @@
 
 <script>
 import Header from './components/Header'
-import ColorPicker from './components/ColorPicker'
-import LedButton from './components/LedButton'
+import FadeControl from './components/FadeControl'
 export default {
   name: 'App',
 
   components: {
     Header,
-    ColorPicker,
-    LedButton,
+    FadeControl,
   },
 
   data: () => ({

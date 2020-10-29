@@ -3,7 +3,7 @@
         class="control-element"
         elevation="2"
         x-large
-        v-on:click="test('data')"
+        v-on:click="$emit('clicked')"
     >{{txt}}</v-btn>
 </template>
 
@@ -11,17 +11,6 @@
 export default {
     name: "LedButton",
     props: ["txt"],
-    methods: {
-        test() {
-            fetch("http://192.168.0.65:8080/led_control", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({"script":{"name":"fade","args":["--hsv",[0,255,0],[255,0,0]]}}),
-            });
-        }
-    }
 }
 </script>
 
