@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <LedButton txt="fade leds" v-on:clicked="post" />
+    <LedButton txt="fade leds" v-on:clicked="send" />
     <ColorPicker v-on:input="leftColor = $event.rgba" />
     <ColorPicker v-on:input="rightColor = $event.rgba" />
     <v-radio-group v-on:change="colorSpace = $event">
@@ -14,13 +14,14 @@
 <script>
 import LedButton from "./LedButton";
 import ColorPicker from "./ColorPicker";
+import common from "../utils/common";
 export default {
   components: {
     LedButton,
     ColorPicker,
   },
   methods: {
-    post() {
+    send() {
       const data = {
         script: {
           name: "fade",
@@ -31,9 +32,7 @@ export default {
           ],
         },
       };
-    },
-    test(msg) {
-      console.log(msg);
+      common.post(data);
     },
   },
   data: () => {
