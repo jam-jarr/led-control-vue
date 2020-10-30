@@ -3,9 +3,9 @@
     <LedButton txt="fade leds" v-on:clicked="send" />
     <ColorPicker v-on:input="leftColor = $event.rgba" />
     <ColorPicker v-on:input="rightColor = $event.rgba" />
-    <v-radio-group v-on:change="colorSpace = $event">
-      <v-radio label="RGB" value="--rgb" />
+    <v-radio-group v-on:change="colorSpace = $event" mandatory>
       <v-radio label="HSV" value="--hsv" />
+      <v-radio label="RGB" value="--rgb" />
       <v-radio label="LAB" value="--lab" />
     </v-radio-group>
   </v-row>
