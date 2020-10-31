@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <LedButton txt="clear leds" v-on:clicked="send" />
+    <LedButton txt="clear" v-on:clicked="send" />
   </v-row>
 </template>
 

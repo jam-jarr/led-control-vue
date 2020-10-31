@@ -1,14 +1,14 @@
 <template>
   <v-app>
     <Header />
-    <v-col>
-      <FadeLed />
-      <v-divider></v-divider>
-      <ClearLed />
-      <v-divider></v-divider>
+    <v-col id="main-col">
       <SetLed />
-      <v-divider></v-divider>
+      <v-divider inset></v-divider>
+      <FadeLed />
+      <v-divider inset></v-divider>
       <RainbowLed />
+      <v-divider inset></v-divider>
+      <ClearLed />
     </v-col>
   </v-app>
 </template>
@@ -39,5 +39,13 @@ export default {
 <style>
 .control-element {
   margin: 10px;
+}
+#main-col {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.v-divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 </style>

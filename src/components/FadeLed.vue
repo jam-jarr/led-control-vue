@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <LedButton txt="fade leds" v-on:clicked="send" />
+    <LedButton txt="fade" v-on:clicked="send" />
     <ColorPicker v-on:input="leftColor = $event.rgba" />
     <ColorPicker v-on:input="rightColor = $event.rgba" />
     <v-radio-group v-on:change="colorSpace = $event" mandatory>

@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <LedButton txt="Set leds" v-on:clicked="send" />
+    <LedButton txt="Set" v-on:clicked="send" />
     <ColorPicker v-on:input="color = $event.rgba" />
   </v-row>
 </template>
