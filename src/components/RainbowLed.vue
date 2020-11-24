@@ -18,7 +18,6 @@
         thumb-label="always"
       />
     </v-col>
-    {{ rs }}
   </v-row>
 </template>
 
