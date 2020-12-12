@@ -18,7 +18,7 @@ export default {
           name: "clear_led",
         },
       };
-      common.post(data);
+      common.post(data, "led_control");
     },
   },
 };

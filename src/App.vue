@@ -1,15 +1,19 @@
 <template>
   <v-app>
     <Header />
-    <v-col id="main-col">
-      <SetLed />
-      <v-divider inset></v-divider>
-      <FadeLed />
-      <v-divider inset></v-divider>
-      <RainbowLed />
-      <v-divider inset></v-divider>
-      <ClearLed />
-    </v-col>
+    <v-main>
+      <v-col id="main-col">
+        <Presets />
+        <v-divider inset></v-divider>
+        <SetLed />
+        <v-divider inset></v-divider>
+        <FadeLed />
+        <v-divider inset></v-divider>
+        <RainbowLed />
+        <v-divider inset></v-divider>
+        <ClearLed />
+      </v-col>
+    </v-main>
   </v-app>
 </template>
 
@@ -19,6 +23,7 @@ import FadeLed from "./components/FadeLed";
 import ClearLed from "./components/ClearLed";
 import SetLed from "./components/SetLed";
 import RainbowLed from "./components/RainbowLed";
+import Presets from "./components/Presets";
 export default {
   name: "App",
 
@@ -28,6 +33,7 @@ export default {
     ClearLed,
     SetLed,
     RainbowLed,
+    Presets,
   },
 
   data: () => ({

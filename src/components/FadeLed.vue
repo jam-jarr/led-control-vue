@@ -32,7 +32,7 @@ export default {
           ],
         },
       };
-      common.post(data);
+      common.post(data, "led_control");
     },
   },
   data: () => {

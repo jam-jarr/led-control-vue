@@ -38,7 +38,7 @@ export default {
       };
       console.log(data);
       console.log(this.rs);
-      common.post(data);
+      common.post(data, "led_control");
     },
     test(msg) {
       console.log(msg);

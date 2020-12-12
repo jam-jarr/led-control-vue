@@ -1,6 +1,6 @@
 const functions = {
-  post(data) {
-    fetch("http://192.168.0.65:8080/led_control", {
+  post(data, path) {
+    fetch("http://192.168.0.65:8080/" + path, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -22,7 +22,7 @@ export default {
           args: [[this.color.r, this.color.g, this.color.b]],
         },
       };
-      common.post(data);
+      common.post(data, "led_control");
     },
   },
   data: () => {
